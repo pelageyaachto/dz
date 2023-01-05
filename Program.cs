@@ -343,7 +343,7 @@ Console.WriteLine($"Разница между максимальным и мин
 */
  
  //Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-
+/*
 Console.Write("Input a numbers");
 int num = Convert.ToInt32(Console.ReadLine());
 int name(int num)
@@ -354,5 +354,48 @@ int name(int num)
 }
 int result = name(num);
 Console.WriteLine(result); 
- 
+ */
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+/*
+ Console.WriteLine("Input a size");
+int size = Convert.ToInt32(Console.ReadLine());
+int i = 0;
+int count = 0;
+int[] A = new int [size];
+for (i = 0; i < size; i++)
+{     
+  Console.WriteLine("Input every numbers other");
+A[i] = Convert.ToInt32(Console.ReadLine());
+}
+  for (i = 0; i < size; i = i + 1)
+  {
+  if (A[i] > 0)
+{
+count = count + 1;
+Console.WriteLine("число " + A[i] + " больше 0, тогда количество чисел больше  0 = " + count);
+}
+else
+{
+Console.WriteLine("число " + A[i] + " меньше 0, тогда количество чисел больше  0 = " + count);
+}
+  }
+*/
+
+// Задача 43.
+/*
+Console.Write("Введите k1: ");
+var k1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b1: ");
+var b1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите k2: ");
+var k2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b2: ");
+var b2 = Convert.ToDouble(Console.ReadLine());
+
+var x = (b1 - b2)/(k1 - k2);
+var y = (k1 * (b2 - b1)) / ( k1 - k2) + b1;
+Console.WriteLine("будет пересекаться в точке " + x + ";" + y );
+*/
+
 
