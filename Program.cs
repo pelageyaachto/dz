@@ -398,4 +398,146 @@ var y = (k1 * (b2 - b1)) / ( k1 - k2) + b1;
 Console.WriteLine("будет пересекаться в точке " + x + ";" + y );
 */
 
+//Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+/*
+int m=3, n=4;
+double [,] array = new double[m,n];
+Random rand = new Random();
+for (int i = 0; i < m; i++)
+{
+  for (int j = 0; j < n; j++)
+  {
+    array[i,j]= (double)rand.Next(-100,100)/10;
+    Console.Write(array[i,j] + " ");
+  }
+  Console.WriteLine();
+}
+*/
+/*
+double[,] CreateRandom2dArray()
+{
+    Console.Write("Введите количество строк: ");
+    int m = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите количество столбцов: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите min: ");
+    int minValue = Convert.ToInt32(Console.ReadLine()) * 100;
+    Console.Write("Введите max: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine()) * 100;
 
+    double [,] array = new double[m,n];
+    Random rand = new Random();
+
+    for(int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            array[i,j] = (double)rand.Next(minValue, maxValue)/100;
+    return array;
+}
+
+
+void Show2dArray(double[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i,j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+double[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+*/
+
+//Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+// и возвращает значение этого элемента или же указание, что такого элемента нет.
+/*
+Console.WriteLine("введите max");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите min ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите m ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите n ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[m,n];
+Console.WriteLine("введите значение");
+int number = Convert.ToInt32(Console.ReadLine());
+FillArray (array);
+FindElementaryArray (array, number);
+
+ void FillArray (int [,] arraytofill)
+ {
+  for (int i = 0; i < arraytofill.GetLength(0); i++)
+  {
+    for (int j = 0; j < arraytofill.GetLength(1); j++)
+    {
+      array[i,j] = new Random().Next(min,max); 
+      Console.Write(array[i,j] + " ");
+    }
+    Console.WriteLine();
+  }
+
+ }
+
+ void FindElementaryArray (int [,] findelement, int usernumber)
+{
+  bool number = false;
+  for (int i = 0; i < findelement.GetLength(0); i++)
+  {
+    for (int j = 0; j < findelement.GetLength(1); j++)
+    {
+      if (findelement [i,j] == usernumber)
+      Console.WriteLine("число находится по индексам " + i + " " +j); 
+      number = true;
+    }
+  }
+  if (!number)
+  {
+    Console.WriteLine("Такого значения нет");
+  }
+}
+*/
+
+//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+/*
+Console.WriteLine("Enter min:");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter max:");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter n:");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter m:");
+int m = Convert.ToInt32(Console.ReadLine());
+int [,]arr=new int [n, m];
+double []sum=new double [m];
+Random ran = new Random();
+
+for (int i=0; i<n; i++)
+{
+    for(int j=0; j<m; j++)
+    {
+        arr[i, j] = ran.Next(min, max);
+
+        Console.Write(arr[i, j] + "\t");
+    }
+    Console.WriteLine();
+}
+
+for (int i=0; i<m; i++)
+{
+    for(int j=0; j<n; j++)
+    {
+        sum[i] += arr[j, i];
+    }
+}
+
+for (int i=0; i<m; i++)
+{
+    Console.Write((sum[i] / n)  + " ");
+}
+
+*/
