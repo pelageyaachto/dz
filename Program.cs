@@ -541,3 +541,60 @@ for (int i=0; i<m; i++)
 }
 
 */
+
+/* задача 54
+Console.WriteLine("Enter n:");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter m:");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter min:");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter max:");
+int max = Convert.ToInt32(Console.ReadLine());
+int[,] table = new int[n, m];
+FillArrayRandom(table);
+PrintArray(table);
+SortToLower(table);
+Console.WriteLine();
+PrintArray(table);
+void FillArrayRandom(int[,] array)
+{
+    for (int n = 0; n < array.GetLength(0); n++)
+    {
+        for (int m = 0; m < array.GetLength(1); m++)
+        {
+            array[n, m] = new Random().Next(min, max);
+        }
+    }
+}
+void SortToLower(int[,] array)
+{
+    for (int n = 0; n < array.GetLength(0); n++)
+    {
+        for (int m = 0; m < array.GetLength(1); m++)
+        {
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            {
+                if (array[n, k] < array[n, k + 1])
+                {
+                    int temp = array[n, k + 1];
+                    array[n, k + 1] = array[n, k];
+                    array[n, k] = temp;
+                }
+            }
+        }
+    }
+}
+void PrintArray(int[,] array)
+{
+    for (int n = 0; n < array.GetLength(0); n++)
+    {
+        for (int m = 0; m < array.GetLength(1); m++)
+        {
+            Console.Write($"{array[n, m]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+*/
