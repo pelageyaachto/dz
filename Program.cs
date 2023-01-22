@@ -598,3 +598,42 @@ void PrintArray(int[,] array)
 }
 
 */
+
+//Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+/*
+N = int(input("Введите число N: "))
+
+def recursion(n):
+    if n == 0:
+        return 0
+    else:
+        print(n)
+        return recursion(n-1)
+    
+recursion(N)
+*/
+
+ //Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+ 
+/* 
+M = int(input('Введите начальное число: '))
+N = int(input('Введите конечное число: '))
+
+sum_numbers = 0
+for i in range(M, N + 1):
+    sum_numbers += i
+print(f'Сумма натуральных элементов в промежутке от {M} до {N} равна {sum_numbers}')
+*/
+
+// Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+/*
+def ackermann(m, n):
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        return ackermann(m - 1, 1)
+    elif m > 0 and n > 0:
+        return ackermann(m - 1, ackermann(m, n - 1))
+        
+        */
